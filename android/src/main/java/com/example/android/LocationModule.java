@@ -1,4 +1,4 @@
-package com.rh.RHlocation;
+package com.example.android;
 
 import android.app.Activity;
 import android.content.Context;

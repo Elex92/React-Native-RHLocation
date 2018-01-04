@@ -1,4 +1,4 @@
-package com.rh.RHlocation;
+package com.example.android;
 
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.JavaScriptModule;

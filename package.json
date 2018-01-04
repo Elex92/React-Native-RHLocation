@@ -1,6 +1,6 @@
 {
   "name": "react-native-rhlocation",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "定位",
   "main": "index.js",
   "scripts": {
