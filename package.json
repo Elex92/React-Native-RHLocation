@@ -1,6 +1,6 @@
 {
   "name": "react-native-rhlocation",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "定位",
   "main": "index.js",
   "scripts": {
@@ -17,8 +17,8 @@
   },
   "homepage": "https://github.com/Elex92/React-Native-RHLocation#readme",
   "keywords": [
-    "react-component",
-    "react-native",
-    "android"
+    "react",
+    "native",
+    "rhlocation"
   ]
 }
