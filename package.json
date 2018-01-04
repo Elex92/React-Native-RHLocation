@@ -1,0 +1,24 @@
+{
+  "name": "react-native-rhlocation",
+  "version": "1.0.0",
+  "description": "定位",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elex92/React-Native-RHLocation.git"
+  },
+  "author": "elex",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Elex92/React-Native-RHLocation/issues"
+  },
+  "homepage": "https://github.com/Elex92/React-Native-RHLocation#readme",
+  "keywords": [
+    "react-component",
+    "react-native",
+    "android"
+  ]
+}
