@@ -17,7 +17,7 @@
 
 ### 手动导入
 
-####Android Studio
+#### Android Studio
 
 1. 配置 settings.gradle
 
