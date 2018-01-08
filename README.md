@@ -58,7 +58,7 @@ compile project(':rreact-native-rhlocation')
 <!--用于申请获取蓝牙信息进行室内定位-->
 <uses-permission android:name="android.permission.BLUETOOTH"></uses-permission>
 <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"></uses-permission>
-####Xcode
+#### Xcode
 
 *  AMapLocationKit.framework 文件copy或拖拽到工程文件夹中，左侧目录选中工程名，在 TARGETS->Build Phases-> Link Binary With Libaries 中点击“+”按钮，在弹出的窗口中点击“Add Other”按钮，选择工程目录下的 AMapLocationKit.framework文件添加到工程中
 
