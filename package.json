@@ -1,6 +1,6 @@
 {
   "name": "react-native-rhlocation",
-  "version": "1.0.3",
+  "version": "1.0.15",
   "description": "定位",
   "main": "index.js",
   "scripts": {
@@ -19,6 +19,7 @@
   "keywords": [
     "react",
     "native",
-    "rhlocation"
+    "ruihao",
+    "location"
   ]
 }

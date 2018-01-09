@@ -13,7 +13,7 @@
 
 ### 自动导入
 
-* react-native link
+* react-native link react-native-rhlocation
 
 ### 手动导入
 
@@ -21,22 +21,25 @@
 
 1. 配置 settings.gradle
 
-include ':react-native-rhlocation'
+`include ':react-native-rhlocation'
+project(':react-native-rhlocation').projectDir = new File(settingsDir, '../node_modules/react-native-rhlocation/android')`
 
-project(':react-native-rhlocation').projectDir = new File(settingsDir, '../node_modules/react-native-rhlocation/android')
+
 2. 配置 build.gradle
 
 
 dependencies {
 
 
-compile project(':rreact-native-rhlocation')
+compile project(':react-native-rhlocation')
 }
 3. 配置AndroidMainifest.xml
 #####   配置高德Key
 ` <meta-data android:name="com.amap.api.v2.apikey" android:value="高德Key"> `
 #####       添加权限（根据需求而定，添加自己想要的权限）
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+
+
 
 
 
@@ -58,9 +61,19 @@ compile project(':rreact-native-rhlocation')
 <!--用于申请获取蓝牙信息进行室内定位-->
 <uses-permission android:name="android.permission.BLUETOOTH"></uses-permission>
 <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"></uses-permission>
+<<<<<<< HEAD
+=======
+#### Xcode
+>>>>>>> origin/master
+
+4. MainApplication
+
+new LocationPackage()
+
+
 #### Xcode
 
-*  AMapLocationKit.framework 文件copy或拖拽到工程文件夹中，左侧目录选中工程名，在 TARGETS->Build Phases-> Link Binary With Libaries 中点击“+”按钮，在弹出的窗口中点击“Add Other”按钮，选择工程目录下的 AMapLocationKit.framework文件添加到工程中
+*  react-native-baidu-map/ios/lib下的AMapLocationKit.framework与AMapFoundationKit.framework 文件copy或拖拽到工程文件夹中，左侧目录选中工程名，在 TARGETS->Build Phases-> Link Binary With Libaries 中点击“+”按钮，在弹出的窗口中点击“Add Other”按钮，选择工程目录下的 AMapLocationKit.framework文件添加到工程中
 
 * 需要引入的系统库文件
 
@@ -102,3 +115,59 @@ iOS 11 版本：
 NSLocationAlwaysAndWhenInUseUsageDescription 申请Always权限，以便应用在前台和后台（suspend 或 terminated）都可以获取到更新的位置数据（NSLocationWhenInUseUsageDescription 也必须有）。
 
 ![](https://a.amap.com/lbs/static/img/iOS11%E6%9D%83%E9%99%90.png)
+
+* AppDelegate.m init 初始化
+
+#import <AMapFoundationKit/AMapFoundationKit.h>
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+...
+[AMapServices sharedServices].apiKey =@"高德Key";
+...
+}
+
+## React Native使用
+
+### 定位方法使用
+1. 同步使用
+
+async componentDidMount(){
+
+
+let locationModel= await  LocationModule.startLocation();
+
+}
+
+
+2. 异步使用
+
+LocationModule.startLocation().then((locationModel)=>{
+
+
+});
+
+### LcationModel属性说明
+
+| option                  | description  |iOS |Android
+| ----------------------- |:-----:| :-------:| :-------:
+| address    | 地址详情  | OK|OK
+| country         | 国家   | OK|OK
+| cityCode     | 城市编码  | OK|OK
+| city                | 城市名称 | OK|OK
+| streetNumber                    | 街道编码 | OK|OK
+| streetName                 | 街道名称 | OK|OK
+| district                | 区县名称 | OK|OK
+| province               | 省份名称  | OK|OK
+| latitude  | 地址纬度   | OK|OK
+| longitude      | 地址经度   | OK|OK
+| adCode | 行政区域编码  | OK|OK
+| statusCode           | 定位状态码   | OK|－
+| statusMessage           | 定位状态说明   | OK| －
+| locationType           | 定位状态类型   | －| OK
+| gpsStatus           | GPS状态   | －| OK
+
+
+
+
+
