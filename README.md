@@ -21,8 +21,9 @@
 
 1. 配置 settings.gradle 
 
-	`include ':react-native-rhlocation'
- project(':react-native-rhlocation').projectDir = new File(settingsDir, '../node_modules/react-native-rhlocation/android')`
+		include ':react-native-rhlocation'
+
+		project(':react-native-rhlocation').projectDir = new File(settingsDir, '../node_modules/react-native-rhlocation/android')
 
 
 2. 配置 build.gradle 
@@ -32,7 +33,7 @@
 
 
 		compile project(':react-native-rhlocation')
-		
+	
 		}
 3. 配置AndroidMainifest.xml 
 #####   配置高德Key
