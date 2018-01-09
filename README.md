@@ -28,21 +28,17 @@
 2. 配置 build.gradle 
 
 	
-	dependencies {
+		dependencies {
 
 
 		compile project(':react-native-rhlocation')
-	}
+		
+		}
 3. 配置AndroidMainifest.xml 
 #####   配置高德Key
-	 ` <meta-data android:name="com.amap.api.v2.apikey" android:value="高德Key"> `
+	 	<meta-data android:name="com.amap.api.v2.apikey" android:value="高德Key"> 
 ##### 	  添加权限（根据需求而定，添加自己想要的权限）
-	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
-
-
-	    
-
-
+		<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
 	    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
 	    <!--用于获取运营商信息，用于支持提供运营商信息相关的接口-->
 	    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
@@ -64,7 +60,7 @@
 
 4. MainApplication
 
-	new LocationPackage()
+		new LocationPackage()
 
 
 #### Xcode
