@@ -123,7 +123,13 @@ NSLocationAlwaysAndWhenInUseUsageDescription 申请Always权限，以便应用�
 ## React Native使用
 
 ### 定位方法使用
-1. 同步使用
+
+1. 引用
+
+	`import LocationModule from 'react-native-rhlocation';`
+
+
+2. 同步使用
 
 		async componentDidMount(){
 
@@ -133,7 +139,7 @@ NSLocationAlwaysAndWhenInUseUsageDescription 申请Always权限，以便应用�
 		}
 
 
-2. 异步使用
+3. 异步使用
 
 		LocationModule.startLocation().then((locationModel)=>{
 
